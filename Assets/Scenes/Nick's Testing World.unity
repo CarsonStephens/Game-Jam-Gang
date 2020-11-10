@@ -749,7 +749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 500
-  jumpHeight: 250
+  jumpHeight: 350
 --- !u!212 &1540452140
 SpriteRenderer:
   m_ObjectHideFlags: 0
