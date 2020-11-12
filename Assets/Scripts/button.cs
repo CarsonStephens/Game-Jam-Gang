@@ -23,6 +23,7 @@ public class button : MonoBehaviour
     {
         timer = timerDuration;
         door.GetComponent<BoxCollider2D> ().enabled = GetComponent<BoxCollider2D> ().enabled;
+        mySR = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -49,6 +50,8 @@ public class button : MonoBehaviour
         if (buttonActive == true)
         {
             GetComponent<BoxCollider2D> ().enabled = false;
+            mySR.color = new Color(mySR.color.r - 0.5f, mySR.color.g - 0.5f, mySR.color.b - 0.5f, 1f);
+            door.GetComponent<SpriteRenderer>().color = new Color(mySR.color.r - 0.5f, mySR.color.g - 0.5f, mySR.color.b - 0.5f, 1f);
         }
         door.GetComponent<BoxCollider2D>().enabled = GetComponent<BoxCollider2D>().enabled;
     }
