@@ -77,8 +77,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "ground" || collision.gameObject.tag == "Moving")
         {            
             isGrounded = false;
+            hasJump = false;
         }
     }
-
-
 }
