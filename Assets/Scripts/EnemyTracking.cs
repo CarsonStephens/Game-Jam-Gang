@@ -25,17 +25,15 @@ public class EnemyTracking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Target.transform.position.x > transform.position.x)
+        if (Target.transform.position.x > transform.position.x && Target.transform.position.x - 5 < transform.position.x)
         {
             LookingRight = true;
             transform.Translate(2 * Time.deltaTime * Speed, 0, 0);
-            transform.localScale = new Vector2 (2, 2);
         }
-        else
+        else if (Target.transform.position.x < transform.position.x && Target.transform.position.x + 5 > transform.position.x)
         {
             LookingRight = false;
             transform.Translate(-2 * Time.deltaTime * Speed, 0, 0);
-            transform.localScale = new Vector2 (2, 2);
         }
     }
 }

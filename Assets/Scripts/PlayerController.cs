@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         //make sure to tag all walkable surfaces as ground
-        if (collision.gameObject.tag == "ground")
+        if (collision.gameObject.tag == "ground" || collision.gameObject.tag == "Moving")
         {            
             isGrounded = false;
         }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 //Tyler D
 //11/4/2020
 //buttons or somethin
@@ -14,10 +15,14 @@ public class button : MonoBehaviour
     public float timerDuration = 0;
     private float timer;
     private bool buttonActive;
+    private double origional = 0.5;
+
+    SpriteRenderer mySR;
     // Start is called before the first frame update
     void Start()
     {
-        timer = timerDuration;  
+        timer = timerDuration;
+        door.GetComponent<BoxCollider2D> ().enabled = GetComponent<BoxCollider2D> ().enabled;
     }
 
     // Update is called once per frame
@@ -28,18 +33,24 @@ public class button : MonoBehaviour
             if (timer <= 0)
             {
                 buttonActive = false;
-                door.SetActive(true);
                 timer = timerDuration;
+                GetComponent<BoxCollider2D> ().enabled = true;
+                mySR.color = new Color(mySR.color.r, mySR.color.g, mySR.color.b, 1f);
+                door.GetComponent<SpriteRenderer>().color = new Color(mySR.color.r, mySR.color.g, mySR.color.b, 1f);
             }
             else
             {
                 timer -= Time.deltaTime;
+                GetComponent<BoxCollider2D> ().enabled = false;
+                mySR.color = new Color(mySR.color.r - 0.5f, mySR.color.g - 0.5f, mySR.color.b - 0.5f, 1f);
+                door.GetComponent<SpriteRenderer>().color = new Color(mySR.color.r - 0.5f, mySR.color.g - 0.5f, mySR.color.b - 0.5f, 1f);
             }
         }
         if (buttonActive == true)
         {
-            door.gameObject.SetActive(false);
+            GetComponent<BoxCollider2D> ().enabled = false;
         }
+        door.GetComponent<BoxCollider2D>().enabled = GetComponent<BoxCollider2D>().enabled;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)    
