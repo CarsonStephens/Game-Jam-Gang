@@ -31,9 +31,12 @@ public class PlayerController : MonoBehaviour
 
         movement.x = Input.GetAxisRaw("Horizontal");               
         rb.AddForce(transform.right * movement.x * Speed * Time.deltaTime);
+        
 
         //Sets Speed value to the player movement speed (By Gavin Fifer)
         animator.SetFloat("Speed", Mathf.Abs(movement.x));
+        movement.y = Input.GetAxisRaw("Vertical");
+        animator.SetFloat("Is Jumping", rb.velocity.y);
 
         //Flips sprite to correct direction (By Gavin Fifer)
         if (movement.x < 0)
@@ -52,8 +55,7 @@ public class PlayerController : MonoBehaviour
                 rb.AddForce(transform.up * jumpHeight);
                 hasJump = false;
 
-                //Plays jump animation
-                animator.SetBool("Is Jumping", true);
+                
             }
         }
         if (isGrounded == true && movement.x == 0 && hasJump == true)
