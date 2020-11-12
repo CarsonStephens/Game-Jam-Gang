@@ -12,10 +12,16 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded = false;    
     Rigidbody2D rb;
     bool hasJump = true;
+
+    //this is for animations (By Gavin Fifer)
+    public Animator animator;
+    private SpriteRenderer mySpriteRenderer;
+
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();        
+        rb = GetComponent<Rigidbody2D>();
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -25,12 +31,31 @@ public class PlayerController : MonoBehaviour
 
         movement.x = Input.GetAxisRaw("Horizontal");               
         rb.AddForce(transform.right * movement.x * Speed * Time.deltaTime);
+        
+
+        //Sets Speed value to the player movement speed (By Gavin Fifer)
+        animator.SetFloat("Speed", Mathf.Abs(movement.x));
+        movement.y = Input.GetAxisRaw("Vertical");
+        animator.SetFloat("Is Jumping", rb.velocity.y);
+
+        //Flips sprite to correct direction (By Gavin Fifer)
+        if (movement.x < 0)
+        {
+            mySpriteRenderer.flipX = true;
+        }
+        else if (movement.x > 0)
+        {
+            mySpriteRenderer.flipX = false;
+        }
+
         if (hasJump == true)
         {
             if (Input.GetKeyDown("space"))
             {
                 rb.AddForce(transform.up * jumpHeight);
                 hasJump = false;
+
+                
             }
         }
         if (isGrounded == true && movement.x == 0 && hasJump == true)
@@ -41,7 +66,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)    
     {        
-        if (collision.gameObject.tag == "ground")
+        if (collision.gameObject.tag == "ground" || collision.gameObject.tag == "Moving")
         {
             hasJump = true;
             isGrounded = true;
@@ -51,11 +76,10 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         //make sure to tag all walkable surfaces as ground
-        if (collision.gameObject.tag == "ground")
+        if (collision.gameObject.tag == "ground" || collision.gameObject.tag == "Moving")
         {            
             isGrounded = false;
+            hasJump = false;
         }
     }
-
-
 }

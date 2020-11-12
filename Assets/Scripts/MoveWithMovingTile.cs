@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class MoveWithMovingTile : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D tile)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        transform.parent = tile.transform;
+        if (collision.gameObject.tag == "Moving")
+        {
+            transform.parent = collision.transform;
+        }
     }   
-    private void OnCollisionExit2D(Collision2D tile)
+    private void OnCollisionExit2D(Collision2D collision)
     {
         transform.parent = null;
     }
