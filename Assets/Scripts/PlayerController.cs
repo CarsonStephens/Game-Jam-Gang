@@ -53,9 +53,6 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown("space"))
             {
                 rb.AddForce(transform.up * jumpHeight);
-                hasJump = false;
-
-                
             }
         }
         if (isGrounded == true && movement.x == 0 && hasJump == true)

@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 500
-  jumpHeight: 250
+  jumpHeight: 350
   animator: {fileID: 686881995346079526}
 --- !u!50 &686881995346079514
 Rigidbody2D:
