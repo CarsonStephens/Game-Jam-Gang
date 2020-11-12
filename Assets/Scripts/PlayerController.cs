@@ -12,10 +12,16 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded = false;    
     Rigidbody2D rb;
     bool hasJump = true;
+
+    //this is for animations (By Gavin Fifer)
+    public Animator animator;
+    private SpriteRenderer mySpriteRenderer;
+
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();        
+        rb = GetComponent<Rigidbody2D>();
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -25,12 +31,29 @@ public class PlayerController : MonoBehaviour
 
         movement.x = Input.GetAxisRaw("Horizontal");               
         rb.AddForce(transform.right * movement.x * Speed * Time.deltaTime);
+
+        //Sets Speed value to the player movement speed (By Gavin Fifer)
+        animator.SetFloat("Speed", Mathf.Abs(movement.x));
+
+        //Flips sprite to correct direction (By Gavin Fifer)
+        if (movement.x < 0)
+        {
+            mySpriteRenderer.flipX = true;
+        }
+        else if (movement.x > 0)
+        {
+            mySpriteRenderer.flipX = false;
+        }
+
         if (hasJump == true)
         {
             if (Input.GetKeyDown("space"))
             {
                 rb.AddForce(transform.up * jumpHeight);
                 hasJump = false;
+
+                //Plays jump animation
+                animator.SetBool("Is Jumping", true);
             }
         }
         if (isGrounded == true && movement.x == 0 && hasJump == true)

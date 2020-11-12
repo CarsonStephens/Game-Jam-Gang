@@ -728,6 +728,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 500
   jumpHeight: 250
+  animator: {fileID: 325335906}
 --- !u!212 &325335904
 SpriteRenderer:
   m_ObjectHideFlags: 0
