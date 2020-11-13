@@ -42,10 +42,12 @@ public class PlayerController : MonoBehaviour
         if (movement.x < 0)
         {
             mySpriteRenderer.flipX = true;
+            facingright = false;
         }
         else if (movement.x > 0)
         {
             mySpriteRenderer.flipX = false;
+            facingright = true;
         }
 
         if (hasJump == true)
