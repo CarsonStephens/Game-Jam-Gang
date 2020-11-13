@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //Tyler Dean
 //10/19/2020
@@ -54,7 +55,6 @@ public class PlayerController : MonoBehaviour
                 rb.AddForce(transform.up * jumpHeight);
             }
         }
-
     }
 
     private void OnCollisionStay2D(Collision2D collision)
