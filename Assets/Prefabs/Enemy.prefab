@@ -14,11 +14,16 @@ GameObject:
   - component: {fileID: 7560687098059004202}
   - component: {fileID: 759257333156526051}
   - component: {fileID: 5283100083312464173}
+<<<<<<< Updated upstream
   - component: {fileID: 5889198215466879526}
   - component: {fileID: 8287408857909804702}
+=======
+  - component: {fileID: 147525496444968090}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Moving
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51b68fa14b7336d49911bcceab98d56a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
 --- !u!95 &5889198215466879526
 Animator:
   serializedVersion: 3
@@ -182,6 +188,9 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &8287408857909804702
+=======
+--- !u!114 &147525496444968090
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -193,3 +202,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22c2bed2a89e6f442b07990ad0694a16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
+=======
+  OnCollide:
+    m_PersistentCalls:
+      m_Calls: []
+>>>>>>> Stashed changes
