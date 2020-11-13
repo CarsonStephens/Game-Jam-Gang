@@ -143,6 +143,21 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4989820329709973090, guid: 974bbaee2a34cf749b221c68f0d0e9fd,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989820329709973090, guid: 974bbaee2a34cf749b221c68f0d0e9fd,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989820329709973090, guid: 974bbaee2a34cf749b221c68f0d0e9fd,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4989820329709973117, guid: 974bbaee2a34cf749b221c68f0d0e9fd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3210,6 +3225,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4989820329709973090, guid: 974bbaee2a34cf749b221c68f0d0e9fd,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989820329709973090, guid: 974bbaee2a34cf749b221c68f0d0e9fd,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989820329709973090, guid: 974bbaee2a34cf749b221c68f0d0e9fd,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4989820329709973117, guid: 974bbaee2a34cf749b221c68f0d0e9fd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3384,6 +3414,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989820329709973090, guid: 974bbaee2a34cf749b221c68f0d0e9fd,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989820329709973090, guid: 974bbaee2a34cf749b221c68f0d0e9fd,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989820329709973090, guid: 974bbaee2a34cf749b221c68f0d0e9fd,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4989820329709973117, guid: 974bbaee2a34cf749b221c68f0d0e9fd,
         type: 3}
