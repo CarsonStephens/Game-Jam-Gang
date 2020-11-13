@@ -21,9 +21,10 @@ public class Attacking : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.J))
-            if (Player.GetComponent<PlayerController> ().facingright == true)
+        {
+            if (Player.GetComponent<PlayerController>().facingright == true)
             {
-                if (Player.GetComponent<Transform> ().position.x - GetComponent<Transform> ().position.x < 0 && Player.GetComponent<Transform>().position.x - GetComponent<Transform>().position.x >= -2)
+                if (Player.GetComponent<Transform>().position.x - GetComponent<Transform>().position.x < 0 && Player.GetComponent<Transform>().position.x - GetComponent<Transform>().position.x >= -2)
                 {
                     Destroy(gameObject);
                 }
@@ -35,5 +36,6 @@ public class Attacking : MonoBehaviour
                     Destroy(gameObject);
                 }
             }
+        }
     }
 }
