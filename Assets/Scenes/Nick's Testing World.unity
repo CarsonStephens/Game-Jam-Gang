@@ -156,7 +156,12 @@ PrefabInstance:
     - target: {fileID: 4531195086133669148, guid: 949ef86ae8ed2274d8ecbcc0c920060e,
         type: 3}
       propertyPath: isTimed
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531195086133669148, guid: 949ef86ae8ed2274d8ecbcc0c920060e,
+        type: 3}
+      propertyPath: timerDuration
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8324313735290342318, guid: 949ef86ae8ed2274d8ecbcc0c920060e,
         type: 3}
@@ -297,7 +302,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &333438743
 MonoBehaviour:

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //Tyler Dean
 //10/19/2020
@@ -9,9 +10,8 @@ public class PlayerController : MonoBehaviour
 {
     public float Speed = 500;
     public float jumpHeight = 200;    
-    private bool isGrounded = false;    
     Rigidbody2D rb;
-    bool hasJump = true;
+    bool hasJump = false;
 
     //this is for animations (By Gavin Fifer)
     public Animator animator;
@@ -53,32 +53,31 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown("space"))
             {
                 rb.AddForce(transform.up * jumpHeight);
-                hasJump = false;
-
-                
             }
-        }
-        if (isGrounded == true && movement.x == 0 && hasJump == true)
-        {
-            rb.velocity = rb.velocity / 2;
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)    
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "ground" || collision.gameObject.tag == "Moving")
+        {
+            hasJump = true;
+        }
+    }
+
+    /*private void OnCollision2D(Collision2D collision)    
     {        
         if (collision.gameObject.tag == "ground" || collision.gameObject.tag == "Moving")
         {
             hasJump = true;
-            isGrounded = true;
         }
-    }
+    }*/
 
     private void OnCollisionExit2D(Collision2D collision)
     {
         //make sure to tag all walkable surfaces as ground
         if (collision.gameObject.tag == "ground" || collision.gameObject.tag == "Moving")
         {            
-            isGrounded = false;
             hasJump = false;
         }
     }
