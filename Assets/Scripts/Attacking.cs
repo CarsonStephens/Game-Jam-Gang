@@ -22,13 +22,10 @@ public class Attacking : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.J))
         {
-            print("hey");
             if (Player.GetComponent<PlayerController>().facingright == true)
             {
-                print("hi");
                 if (Player.transform.position.x < transform.position.x && Mathf.Abs(Player.transform.position.x - transform.position.x) < 2)
                 {
-                    print("ho");
                     Destroy(gameObject);
                 }
             }
