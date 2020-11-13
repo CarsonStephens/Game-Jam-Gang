@@ -13,7 +13,6 @@ public class EnemyTracking : MonoBehaviour
 {
     public GameObject Target;
     public float Speed = 0.5f;
-    private bool LookingRight = true;
     Rigidbody2D myRb;
 
     //this is for animations (By Gavin Fifer)
@@ -31,7 +30,6 @@ public class EnemyTracking : MonoBehaviour
     {
         if (Target.transform.position.x > transform.position.x && Target.transform.position.x - 5 < transform.position.x)
         {
-            LookingRight = true;
             transform.Translate(2 * Time.deltaTime * Speed, 0, 0);
 
             //Animation Stuff (Gavin Fifer)
@@ -40,7 +38,6 @@ public class EnemyTracking : MonoBehaviour
         }
         else if (Target.transform.position.x < transform.position.x && Target.transform.position.x + 5 > transform.position.x)
         {
-            LookingRight = false;
             transform.Translate(-2 * Time.deltaTime * Speed, 0, 0);
 
             //Animation Stuff (Gavin Fifer)
