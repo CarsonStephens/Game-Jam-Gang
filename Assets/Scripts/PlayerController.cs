@@ -12,12 +12,7 @@ public class PlayerController : MonoBehaviour
     public float Speed = 500;
     public float jumpHeight = 200;    
     Rigidbody2D rb;
-<<<<<<< Updated upstream
     public bool hasJump = false, facingright = true;
-=======
-    private bool hasJump = false;
-    public bool facingright = true;
->>>>>>> Stashed changes
 
     //this is for animations (By Gavin Fifer)
     public Animator animator;
