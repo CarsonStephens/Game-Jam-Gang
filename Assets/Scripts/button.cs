@@ -70,7 +70,6 @@ public class button : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             buttonActive = true;
-            print("hi");
         }
     }
 }
