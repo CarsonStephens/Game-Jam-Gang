@@ -55,10 +55,7 @@ public class PlayerController : MonoBehaviour
                 rb.AddForce(transform.up * jumpHeight);
             }
         }
-        if (isGrounded == true && movement.x == 0 && hasJump == true)
-        {
-            rb.velocity = rb.velocity / 2;
-        }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)    
