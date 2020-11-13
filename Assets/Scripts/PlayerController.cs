@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public float Speed = 500;
     public float jumpHeight = 200;    
     Rigidbody2D rb;
-    bool hasJump = false;
+    public bool hasJump = false, facingright = true;
 
     //this is for animations (By Gavin Fifer)
     public Animator animator;
