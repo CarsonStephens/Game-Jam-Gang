@@ -754,6 +754,32 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8880720759685638838, guid: 7c6b6d5eefa971c4fbc38780976a0444,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4912486655130990701, guid: 0482f2f650bde7b4d8f109516c5514cf,
+        type: 3}
+    - target: {fileID: 8880720759685638838, guid: 7c6b6d5eefa971c4fbc38780976a0444,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8880720759685638838, guid: 7c6b6d5eefa971c4fbc38780976a0444,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8880720759685638838, guid: 7c6b6d5eefa971c4fbc38780976a0444,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8880720759685638838, guid: 7c6b6d5eefa971c4fbc38780976a0444,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c6b6d5eefa971c4fbc38780976a0444, type: 3}
 --- !u!1 &1484175055 stripped
@@ -850,7 +876,7 @@ GameObject:
   - component: {fileID: 1884429105}
   m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
