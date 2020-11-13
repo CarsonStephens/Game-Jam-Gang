@@ -64,8 +64,7 @@ public class button : MonoBehaviour
         door.GetComponent<BoxCollider2D>().enabled = GetComponent<BoxCollider2D>().enabled;
     }
 
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         //make sure player is tagged as "Player"
         if (collision.gameObject.tag == "Player")
