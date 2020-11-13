@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 //Tyler Dean
-//Tyler Dean(jump fix by Nicholas)
 //10/19/2020
 //haha movement go brrrr
 public class PlayerController : MonoBehaviour
@@ -43,10 +42,12 @@ public class PlayerController : MonoBehaviour
         if (movement.x < 0)
         {
             mySpriteRenderer.flipX = true;
+            facingright = false;
         }
         else if (movement.x > 0)
         {
             mySpriteRenderer.flipX = false;
+            facingright = true;
         }
 
         if (hasJump == true)
