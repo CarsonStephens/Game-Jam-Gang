@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 //Tyler Dean
+//Tyler Dean(jump fix by Nicholas)
 //10/19/2020
 //haha movement go brrrr
 public class PlayerController : MonoBehaviour
@@ -11,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public float Speed = 500;
     public float jumpHeight = 200;    
     Rigidbody2D rb;
-    bool hasJump = false;
+    public bool hasJump = false, facingright = true;
 
     //this is for animations (By Gavin Fifer)
     public Animator animator;
