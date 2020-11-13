@@ -9,9 +9,8 @@ public class PlayerController : MonoBehaviour
 {
     public float Speed = 500;
     public float jumpHeight = 200;    
-    private bool isGrounded = false;    
     Rigidbody2D rb;
-    bool hasJump = true;
+    bool hasJump = false;
 
     //this is for animations (By Gavin Fifer)
     public Animator animator;
@@ -63,7 +62,6 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "ground" || collision.gameObject.tag == "Moving")
         {
             hasJump = true;
-            isGrounded = true;
         }
     }
 
@@ -72,7 +70,6 @@ public class PlayerController : MonoBehaviour
         //make sure to tag all walkable surfaces as ground
         if (collision.gameObject.tag == "ground" || collision.gameObject.tag == "Moving")
         {            
-            isGrounded = false;
             hasJump = false;
         }
     }
