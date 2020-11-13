@@ -57,13 +57,21 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)    
-    {        
+    private void OnCollisionStay2D(Collision2D collision)
+    {
         if (collision.gameObject.tag == "ground" || collision.gameObject.tag == "Moving")
         {
             hasJump = true;
         }
     }
+
+    /*private void OnCollision2D(Collision2D collision)    
+    {        
+        if (collision.gameObject.tag == "ground" || collision.gameObject.tag == "Moving")
+        {
+            hasJump = true;
+        }
+    }*/
 
     private void OnCollisionExit2D(Collision2D collision)
     {
